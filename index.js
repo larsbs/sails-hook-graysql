@@ -25,6 +25,10 @@ module.exports = sails => {
       const graphqlUrl = sails.config[this.configKey].url;
 
       sails.on('hook:orm:loaded', () => {
+        if (Object.keys(sails.models).length < 1) {
+          return cb();
+        }
+
         GQL.loadFromORM(new WaterlineTranslator(sails.models));
         const Schema = GQL.generateSchema();
 
