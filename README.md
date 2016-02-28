@@ -5,7 +5,7 @@
 
 ## Installation
 
-Install from NPM. Remember to install it's peer dependencies as well.
+Install from NPM.
 
 ```bash
 $ npm install --save sails-hook-graysql
