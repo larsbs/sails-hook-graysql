@@ -18,7 +18,7 @@ That's it. When you install this hook, it will scan all your models and provide 
 
 ## Configuration
 
-By default, configuration lives in `sails.config.graysql`. The configuration key `graysql` can be changed by setting `sails.config.hooks['sails-hooks-babel'].configKey`.
+By default, configuration lives in `sails.config.graysql`. The configuration key `graysql` can be changed by setting `sails.config.hooks['sails-hooks-graysql'].configKey`.
 
 | Parameter | Type        | Details
 |-----------|-------------| -------
