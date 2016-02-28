@@ -1,6 +1,6 @@
 {
   "name": "sails-hook-graysql",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A Sails.js hook to integrate Sails models with GraysQL",
   "main": "index.js",
   "scripts": {},
