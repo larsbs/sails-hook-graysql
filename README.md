@@ -1,6 +1,6 @@
 # sails-hook-graysql
 
-[Sails.js](https://sailsjs.org) hook to integrate [Sails Models]() with [GraysQL](https://github.com/larsbs/graysql). This hooks allows us to create a GraphQL schema using GraysQL from the models of our application.
+[Sails.js](https://sailsjs.org) hook to integrate [sails models](http://sailsjs.org/documentation/concepts/models-and-orm/models) with [GraysQL](https://github.com/larsbs/graysql). This hooks allows us to create a GraphQL schema using GraysQL from the models of our application.
 
 
 ## Installation
