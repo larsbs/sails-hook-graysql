@@ -23,7 +23,6 @@ module.exports = sails => {
     },
 
     initialize(cb) {
-      console.log(this.configKey);
       const graphqlUrl = sails.config[this.configKey].url;
       const ignoredModels = sails.config[this.configKey].ignored.map(model => model.toLowerCase());
 
