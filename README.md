@@ -24,4 +24,4 @@ By default, configuration lives in `sails.config.graysql`. The configuration key
 |-----------|-------------| -------
 | url       | ((string))  | The url in which sails will server the GraphQL schema. Defaults to `/graphql`.
 | graphiql  | ((boolean)) | Whether or not sails should use graphiql.
-| ignore    | ((list))    | A list of names of models to ignore.
+| ignored   | ((list))    | A list of names of models to ignore.
