@@ -17,19 +17,28 @@ module.exports = sails => {
     defaults: {
       __configKey__: {
         url: '/graphql',
-        graphiql: true
+        graphiql: true,
+        ignored: []
       }
     },
 
     initialize(cb) {
+      console.log(this.configKey);
       const graphqlUrl = sails.config[this.configKey].url;
+      const ignoredModels = sails.config[this.configKey].ignored.map(model => model.toLowerCase());
 
       sails.on('hook:orm:loaded', () => {
         if (Object.keys(sails.models).length < 1) {
           return cb();
         }
 
-        GQL.loadFromORM(new WaterlineTranslator(sails.models));
+        const models = Object.keys(sails.models).reduce((models, key) => {
+          if (ignoredModels.indexOf(key) < 0) {
+            models[key] = sails.models[key];
+          }
+          return models;
+        }, {});
+        GQL.loadFromORM(new WaterlineTranslator(models));
         const Schema = GQL.generateSchema();
 
         graphqlRoutes[graphqlUrl] = GraphQLHTTP({
